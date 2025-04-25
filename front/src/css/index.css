@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Styles myself */
+main { min-height: 49vh; }
+
+/* Backgrounds */
+.border-gray { 
+  background-color: #cdcdcb;
+}
+
+/* Colors */
+.color-white { color: #fff; }
+.color-marron { color: #8a2036; }
+
+/* Specific classes */
+.noneBold {
+    color: #000;
+    font-weight: normal;
+}
+
+.bg-aviso-provacidad{
+  background-color: #f1f2ec;
+  border: 1px solid #869e0e;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.font-12{ font-size: 12px; }
+.font-14{ font-size: 14px; }
+
+.carrousel{
+  width: 100%;
+  height: 250px;
+}
