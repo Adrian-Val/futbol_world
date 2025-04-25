@@ -210,13 +210,13 @@ const GetPlayerByFilter = () => {
                     <Table>
                         <TableHead className='bg-secondary'>
                             <TableRow>
-                                <TableCell className='text-white'>#</TableCell>
-                                <TableCell className='text-white'>Nombre del futbolista</TableCell>
-                                <TableCell className='text-white'>Valor de mercado</TableCell>
-                                <TableCell className='text-white'>Dorsal</TableCell>
-                                <TableCell className='text-white'>Posición</TableCell>
-                                <TableCell className='text-white'>Equipo</TableCell>
-                                <TableCell className='text-white'>País</TableCell>
+                                <TableCell className='text-white'><b>#</b></TableCell>
+                                <TableCell className='text-white'><b>Nombre del futbolista</b></TableCell>
+                                <TableCell className='text-white'><b>Valor de mercado</b></TableCell>
+                                <TableCell className='text-white'><b>Dorsal</b></TableCell>
+                                <TableCell className='text-white'><b>Posición</b></TableCell>
+                                <TableCell className='text-white'><b>Equipo</b></TableCell>
+                                <TableCell className='text-white'><b>País</b></TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -224,11 +224,15 @@ const GetPlayerByFilter = () => {
                                 <TableRow key={item.id}>
                                     <TableCell>{item.iterador}</TableCell>
                                     <TableCell>{item.name + ' ' + item.lastname}</TableCell>
-                                    <TableCell>{item.market_value}</TableCell>
+                                    <TableCell>
+
+                                    {new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(item.market_value)}
+
+                                    </TableCell>
                                     <TableCell>#{item.dorsal}</TableCell>
                                     <TableCell>{item.position}</TableCell>
                                     <TableCell>{item.team}</TableCell>
-                                    <TableCell>{item.country}</TableCell>
+                                    <TableCell>{item.country} </TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>
